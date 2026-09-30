@@ -1,0 +1,58 @@
+{
+  "fold": 1,
+  "train_rows": 13367,
+  "valid_rows": 6725,
+  "selected_policy": "raw",
+  "inner_accuracy": {
+    "raw": [
+      0.4620720519131797,
+      0.4526682134570766,
+      0.4505231037489102
+    ],
+    "masked": [
+      0.4558066681584247,
+      0.4529002320185615,
+      0.44768962510897997
+    ],
+    "conflicts_excluded": [
+      0.46475721637950324,
+      0.4443155452436195,
+      0.4479075850043592
+    ],
+    "masked_conflicts_excluded": [
+      0.4589393600358022,
+      0.445707656612529,
+      0.4448561464690497
+    ]
+  },
+  "outer_fits": {
+    "raw": {
+      "excluded_training_rows": 0,
+      "seconds": 20.67893920500046,
+      "accuracy": 0.4486245353159851,
+      "f1_macro": 0.4464387297786588,
+      "balanced_accuracy": 0.44768093448116836
+    },
+    "masked": {
+      "excluded_training_rows": 0,
+      "seconds": 20.04711892600062,
+      "accuracy": 0.44133828996282526,
+      "f1_macro": 0.43888113405669044,
+      "balanced_accuracy": 0.44030615707988674
+    },
+    "conflicts_excluded": {
+      "excluded_training_rows": 1275,
+      "seconds": 19.46518817299966,
+      "accuracy": 0.44936802973977696,
+      "f1_macro": 0.4444487775343342,
+      "balanced_accuracy": 0.4476575517008153
+    },
+    "masked_conflicts_excluded": {
+      "excluded_training_rows": 1275,
+      "seconds": 19.118684564000432,
+      "accuracy": 0.4429739776951673,
+      "f1_macro": 0.43819291076639616,
+      "balanced_accuracy": 0.44134406783315755
+    }
+  }
+}

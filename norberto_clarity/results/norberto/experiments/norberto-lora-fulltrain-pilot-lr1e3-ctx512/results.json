@@ -1,0 +1,356 @@
+{
+  "started_at": "2026-09-23T02:25:32.457743+00:00",
+  "config": {
+    "description": "Context-length ablation: use 512 tokens while preserving the NorBERTo context-256 inner split, optimization, LoRA settings, seed, and checkpoint protocol.",
+    "model_name": "Itau-Unibanco/NorBERTo-base",
+    "revision": "db73446f89c96044863ea05a39f680524b84bccb",
+    "max_length": 512,
+    "truncation": "head_tail",
+    "lora_rank": 4,
+    "lora_alpha": 8,
+    "lora_dropout": 0.05,
+    "lora_layers": null,
+    "batch_size": 4,
+    "gradient_accumulation": 4,
+    "eval_batch_size": 8,
+    "learning_rate": 0.001,
+    "epochs": 3,
+    "patience": 1,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "fp16": false,
+    "attention": "sdpa",
+    "outer_folds": 3,
+    "inner_folds": 5,
+    "seed": 42,
+    "threads": 2,
+    "train_subset_folds": 1,
+    "budget_minutes": 75
+  },
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-7.2.5-200.fc44.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+rocm6.4",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "source_sha256": {
+      "main.py": "fd61857ac5edeffc856e0d2fca067ad5deba580d057aeff5dae7f018b4a9f016",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/audit.py": "c1f97a103bc603f7d3a07521d1e081a9550e9b0058c96aa9b8b57e430ca80a8c",
+      "clarity/cli.py": "cddf4453e6b4802f8fa874d1a4205bb092866e4a17fa004038f1d9d30a00eb6c",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/experiment.py": "0403c6cb16dbd09435a3e712a39479f5c04900950dace7f047bcbed6d5cf6b32",
+      "clarity/finetune.py": "ad218ea8cdb6237a624703622dcfafebb6688b6ea8a76665a7fea74dafcde981",
+      "clarity/hardware.py": "2a4d4f850a571907dcb1a335a68b10933f7d8365a7e6e031c14b2b8c4cad24b5",
+      "clarity/models.py": "5f92aed44d4986ed3f1d8a0d4abb62e384a2f8ed3613b6a1f6f0824a0921b356",
+      "clarity/semantic.py": "4d10ab30b438e0bc22ae5647dbd9f6c4cd86eabbdaa1c6498c3bee7b1f9618e7",
+      "clarity/static_embeddings.py": "496974bf47d3c36425e65f456b9c0d2f128227051864759589ac0b1be064846c"
+    }
+  },
+  "gpu": "AMD Radeon RX 6650 XT",
+  "accelerator": {
+    "backend": "rocm",
+    "device_name": "AMD Radeon RX 6650 XT",
+    "architecture": "gfx1030",
+    "runtime_version": "6.4.43482-0f2d60242",
+    "torch_version": "2.8.0+rocm6.4",
+    "total_memory_mib": 8176.0
+  },
+  "torch_cuda": null,
+  "torch_hip": "6.4.43482-0f2d60242",
+  "mode": "pilot",
+  "protocol": "grouped_inner_holdout_pilot",
+  "note": "One inner grouped holdout, not inner k-fold grid search; no full outer-train refit.",
+  "rows": 20092,
+  "requested_folds": [
+    1
+  ],
+  "finished_at": "2026-09-23T03:04:24.121402+00:00",
+  "seconds": 2326.979961621002,
+  "evaluated_rows": 2617,
+  "status": "complete",
+  "tokenization": {
+    "rows": 20092,
+    "truncated_rows": 2192,
+    "truncated_fraction": 0.10909814851682262,
+    "median_raw_tokens": 177.5,
+    "p95_raw_tokens": 701.4500000000007,
+    "input_case_preserved": true,
+    "cache_fingerprint": "4f5434afc3ed363afb4f2b2485946b7e7c8bf0db97dd9a5bb962c30004792d6c"
+  },
+  "models": {
+    "norberto_lora": {
+      "pooled": {
+        "accuracy": 0.44516622086358426,
+        "f1_macro": 0.4406153215907758,
+        "balanced_accuracy": 0.4455313506378092
+      },
+      "fold_results": [
+        {
+          "fold": 1,
+          "accuracy": 0.44516622086358426,
+          "f1_macro": 0.4406153215907758,
+          "balanced_accuracy": 0.4455313506378092
+        }
+      ],
+      "labels": [
+        "c1",
+        "c234",
+        "c5"
+      ],
+      "confusion_matrix": [
+        [
+          375,
+          244,
+          243
+        ],
+        [
+          264,
+          288,
+          330
+        ],
+        [
+          152,
+          219,
+          502
+        ]
+      ],
+      "classification_report": {
+        "c1": {
+          "precision": 0.4740834386852086,
+          "recall": 0.43503480278422274,
+          "f1-score": 0.4537205081669691,
+          "support": 862.0
+        },
+        "c234": {
+          "precision": 0.38348868175765644,
+          "recall": 0.32653061224489793,
+          "f1-score": 0.35272504592774034,
+          "support": 882.0
+        },
+        "c5": {
+          "precision": 0.4669767441860465,
+          "recall": 0.5750286368843069,
+          "f1-score": 0.5154004106776181,
+          "support": 873.0
+        },
+        "accuracy": 0.44516622086358426,
+        "macro avg": {
+          "precision": 0.44151628820963723,
+          "recall": 0.4455313506378092,
+          "f1-score": 0.4406153215907758,
+          "support": 2617.0
+        },
+        "weighted avg": {
+          "precision": 0.44117983917895354,
+          "recall": 0.44516622086358426,
+          "f1-score": 0.4402579774817558,
+          "support": 2617.0
+        }
+      },
+      "mean_accuracy": 0.44516622086358426,
+      "std_accuracy": 0.0,
+      "mean_f1_macro": 0.4406153215907758,
+      "std_f1_macro": 0.0,
+      "mean_balanced_accuracy": 0.4455313506378092,
+      "std_balanced_accuracy": 0.0
+    },
+    "baseline_matched": {
+      "pooled": {
+        "accuracy": 0.4321742453190676,
+        "f1_macro": 0.43172303220579217,
+        "balanced_accuracy": 0.4323096409930809
+      },
+      "fold_results": [
+        {
+          "fold": 1,
+          "accuracy": 0.4321742453190676,
+          "f1_macro": 0.43172303220579217,
+          "balanced_accuracy": 0.4323096409930809
+        }
+      ],
+      "labels": [
+        "c1",
+        "c234",
+        "c5"
+      ],
+      "confusion_matrix": [
+        [
+          357,
+          275,
+          230
+        ],
+        [
+          247,
+          327,
+          308
+        ],
+        [
+          141,
+          285,
+          447
+        ]
+      ],
+      "classification_report": {
+        "c1": {
+          "precision": 0.4791946308724832,
+          "recall": 0.41415313225058004,
+          "f1-score": 0.44430616054760425,
+          "support": 862.0
+        },
+        "c234": {
+          "precision": 0.3686583990980834,
+          "recall": 0.3707482993197279,
+          "f1-score": 0.36970039570378743,
+          "support": 882.0
+        },
+        "c5": {
+          "precision": 0.45380710659898477,
+          "recall": 0.5120274914089347,
+          "f1-score": 0.48116254036598494,
+          "support": 873.0
+        },
+        "accuracy": 0.4321742453190676,
+        "macro avg": {
+          "precision": 0.4338867121898505,
+          "recall": 0.4323096409930809,
+          "f1-score": 0.43172303220579217,
+          "support": 2617.0
+        },
+        "weighted avg": {
+          "precision": 0.43347194645682224,
+          "recall": 0.4321742453190676,
+          "f1-score": 0.43145684262219347,
+          "support": 2617.0
+        }
+      },
+      "mean_accuracy": 0.4321742453190676,
+      "std_accuracy": 0.0,
+      "mean_f1_macro": 0.43172303220579217,
+      "std_f1_macro": 0.0,
+      "mean_balanced_accuracy": 0.4323096409930809,
+      "std_balanced_accuracy": 0.0
+    },
+    "lexical_matched": {
+      "pooled": {
+        "accuracy": 0.4321742453190676,
+        "f1_macro": 0.42919437864643434,
+        "balanced_accuracy": 0.43218099490801604
+      },
+      "fold_results": [
+        {
+          "fold": 1,
+          "accuracy": 0.4321742453190676,
+          "f1_macro": 0.42919437864643434,
+          "balanced_accuracy": 0.43218099490801604
+        }
+      ],
+      "labels": [
+        "c1",
+        "c234",
+        "c5"
+      ],
+      "confusion_matrix": [
+        [
+          325,
+          280,
+          257
+        ],
+        [
+          245,
+          320,
+          317
+        ],
+        [
+          120,
+          267,
+          486
+        ]
+      ],
+      "classification_report": {
+        "c1": {
+          "precision": 0.47101449275362317,
+          "recall": 0.37703016241299303,
+          "f1-score": 0.41881443298969073,
+          "support": 862.0
+        },
+        "c234": {
+          "precision": 0.3690888119953864,
+          "recall": 0.36281179138321995,
+          "f1-score": 0.3659233847913093,
+          "support": 882.0
+        },
+        "c5": {
+          "precision": 0.45849056603773586,
+          "recall": 0.5567010309278351,
+          "f1-score": 0.5028453181583031,
+          "support": 873.0
+        },
+        "accuracy": 0.4321742453190676,
+        "macro avg": {
+          "precision": 0.4328646235955818,
+          "recall": 0.43218099490801604,
+          "f1-score": 0.42919437864643434,
+          "support": 2617.0
+        },
+        "weighted avg": {
+          "precision": 0.4324849404220471,
+          "recall": 0.4321742453190676,
+          "f1-score": 0.4290204162687225,
+          "support": 2617.0
+        }
+      },
+      "mean_accuracy": 0.4321742453190676,
+      "std_accuracy": 0.0,
+      "mean_f1_macro": 0.42919437864643434,
+      "std_f1_macro": 0.0,
+      "mean_balanced_accuracy": 0.43218099490801604,
+      "std_balanced_accuracy": 0.0
+    }
+  },
+  "comparisons_with_lexical": {
+    "norberto_lora": {
+      "accuracy_delta": 0.012991975544516622,
+      "descriptive_95pct_interval": [
+        -0.00687720163823105,
+        0.03360588175796173
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "baseline_matched": {
+      "accuracy_delta": 0.0,
+      "descriptive_95pct_interval": [
+        -0.01515918449815271,
+        0.015164331578037883
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "limitations": [
+    "Pilot scores select checkpoints and are not outer-test estimates.",
+    "Epochs selected by one inner holdout, not full inner CV.",
+    "No full outer-train refit; matched and full lexical controls distinguish training size.",
+    "Research configurations may change between runs; repeated comparisons are exploratory.",
+    "A global configuration chosen on fold-1 pilot labels can adapt to rows in outer folds 2/3; outer CV is exploratory, not a fresh confirmatory test.",
+    "Budget stops, when present, are recorded per fold; training may end before requested epochs."
+  ]
+}

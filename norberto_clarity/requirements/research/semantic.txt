@@ -1,0 +1,4 @@
+-r ../common.txt
+sentence-transformers==5.1.1
+transformers==4.57.1
+torch==2.8.0

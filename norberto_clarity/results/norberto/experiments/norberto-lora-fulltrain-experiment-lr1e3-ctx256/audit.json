@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "result_dir": "results/norberto-lora-fulltrain-experiment-lr1e3-ctx256",
+  "evaluated_rows": 20092,
+  "evaluated_folds": 3,
+  "is_inner_selection_only": false,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "reference": "lexical_full",
+  "probability_models_checked": [
+    "norberto_lora",
+    "baseline_matched",
+    "lexical_matched",
+    "lexical_full"
+  ],
+  "comparisons": {
+    "norberto_lora": {
+      "accuracy_delta": -0.03613378459088194,
+      "descriptive_95pct_interval": [
+        -0.04445833825752565,
+        -0.02755040753694591
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "baseline_matched": {
+      "accuracy_delta": -0.015180171212422855,
+      "descriptive_95pct_interval": [
+        -0.02085407127214812,
+        -0.009064185884051813
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "lexical_matched": {
+      "accuracy_delta": -0.00437985267768266,
+      "descriptive_95pct_interval": [
+        -0.008823565262282387,
+        0.0002468255845767651
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "note": "Checks saved data, splits and recomputed metrics, not all code paths or statistical independence of research rounds."
+}

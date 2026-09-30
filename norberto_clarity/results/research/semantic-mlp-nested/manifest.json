@@ -1,0 +1,78 @@
+{
+  "started_at": "2026-09-17T02:44:44.617720+00:00",
+  "protocol": "nested_stratified_group_kfold",
+  "seed": 42,
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "rows": 20092,
+  "config": {
+    "description": "MiniLM congelado + MLP de uma camada: duas regularizações, controle semântico linear e referência lexical C=0,25. Sem validação aleatória para early stopping.",
+    "candidates": [
+      {
+        "name": "baseline",
+        "model": "baseline",
+        "grid": {}
+      },
+      {
+        "name": "word_char_lr",
+        "model": "lexical",
+        "grid": {
+          "classifier__C": [
+            0.25
+          ]
+        }
+      },
+      {
+        "name": "semantic_lr",
+        "model": "semantic",
+        "grid": {
+          "classifier__C": [
+            1.0,
+            10.0,
+            100.0
+          ]
+        }
+      },
+      {
+        "name": "semantic_mlp",
+        "model": "semantic_mlp",
+        "grid": {
+          "classifier__alpha": [
+            0.1,
+            1.0
+          ]
+        }
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-7.2.5-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+cu126",
+      "model2vec": "0.7.0"
+    },
+    "source_sha256": {
+      "main.py": "fd61857ac5edeffc856e0d2fca067ad5deba580d057aeff5dae7f018b4a9f016",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/cli.py": "cddf4453e6b4802f8fa874d1a4205bb092866e4a17fa004038f1d9d30a00eb6c",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/experiment.py": "c1ec905eff88d970d5b746d163742b4a2f6df25fa80c24a692487d396f40379f",
+      "clarity/models.py": "5f92aed44d4986ed3f1d8a0d4abb62e384a2f8ed3613b6a1f6f0824a0921b356",
+      "clarity/semantic.py": "3ea7fa10553eb557f5edcace35428f3ab41944e833ea752c40373f7e2682f941",
+      "clarity/static_embeddings.py": "496974bf47d3c36425e65f456b9c0d2f128227051864759589ac0b1be064846c"
+    },
+    "source_capture": "experiment_start"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": "MiniLM congelado + MLP de uma camada: duas regularizações, controle semântico linear e referência lexical C=0,25. Sem validação aleatória para early stopping.",
+  "candidates": [
+    {"name": "baseline", "model": "baseline", "grid": {}},
+    {"name": "word_char_lr", "model": "lexical", "grid": {
+      "classifier__C": [0.25]
+    }},
+    {"name": "semantic_lr", "model": "semantic", "grid": {
+      "classifier__C": [1.0, 10.0, 100.0]
+    }},
+    {"name": "semantic_mlp", "model": "semantic_mlp", "grid": {
+      "classifier__alpha": [0.1, 1.0]
+    }}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "mode": "evaluate-holdout",
+  "training_performed": false,
+  "evaluated_rows": 3999,
+  "source_model_status": "complete",
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+  "adapter_sha256": "d693f6e2995d117ad04a5692817527764fcccee6bfb2dde99120baf9fdd2d385",
+  "checks": {
+    "unique_excel_rows": true,
+    "same_rows_labels_and_groups_as_lexical_reference": true,
+    "source_labels_match_workbook": true,
+    "probabilities_finite_and_normalized": true,
+    "prediction_equals_probability_argmax": true,
+    "accuracy_f1_balanced_accuracy_match_results": true,
+    "confusion_matrix_matches_results": true,
+    "adapter_files_unchanged": true
+  },
+  "norberto_accuracy": 0.45311327831957987,
+  "norberto_f1_macro": 0.4530638860354334,
+  "lexical_accuracy_on_same_rows": 0.4508627156789197,
+  "lexical_f1_macro_on_same_rows": 0.4478157039657455,
+  "accuracy_delta_norberto_minus_lexical": 0.002250562640660165,
+  "descriptive_95pct_group_bootstrap_interval": [-0.015104825958344996, 0.020796801250397345],
+  "bootstrap_resampling_unit": "frozen_similarity_component",
+  "norberto_only_correct": 516,
+  "lexical_only_correct": 507,
+  "note": "Paired descriptive interval conditional on these predictions. The holdout was inspected during earlier lexical research and is not historically independent."
+}

@@ -1,0 +1,171 @@
+{
+  "mode": "evaluate-holdout",
+  "status": "complete",
+  "protocol": "final_model_frozen_holdout_evaluation",
+  "started_at": "2026-09-30T14:20:13.746145+00:00",
+  "training_performed": false,
+  "holdout_evaluated": true,
+  "source_final_metadata_sha256": "48f20311096c426d72a5c27ad377165ba3e191471ff5f5c959f100d27ba2450d",
+  "final_model": "artifacts/norberto-lora-grid-final-20260930-130937/final_model",
+  "adapter_sha256": {
+    "README.md": "28887b85210face620af6b9aa3b6d9ac875fa24b1550e3d82cea0dc08dd06183",
+    "adapter_config.json": "e6820bf981a0637b3764efd57b0db1e9dc4dd36ef2f764737002361499939990",
+    "adapter_model.safetensors": "efdb8ede4ff587fdfd453ba12b2c524a3bf5a53f06170b1d47eea5ff98b53655",
+    "special_tokens_map.json": "ff04ad61d10cbcd7ada89158b41fb665d3c2982a33070da8bbe25c521f58c4c0",
+    "tokenizer.json": "4d94eba9ab0a7d90459ab12fd8125f37ed111bdd4c6a71ebf91a694bcc2ba582",
+    "tokenizer_config.json": "46574f524b36624c9550cbfff31f12a09016aef63af6908dcbf5af3492c25e81",
+    "training_args.bin": "72dd00de18d265074f9505b1c1e53c4c31a5b50a24563d8d9354851faedf1b87"
+  },
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+  "split_path": "results/dataset-hypotheses-20260923/splits.csv",
+  "config": {
+    "description": "Three-fold NorBERTo-512 evaluation on frozen development rows only; reserve the fixed holdout for a later decision and preserve all fold adapters.",
+    "model_name": "Itau-Unibanco/NorBERTo-base",
+    "revision": "db73446f89c96044863ea05a39f680524b84bccb",
+    "max_length": 512,
+    "truncation": "head_tail",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_layers": null,
+    "batch_size": 4,
+    "gradient_accumulation": 4,
+    "eval_batch_size": 8,
+    "learning_rate": 0.0003,
+    "epochs": 3,
+    "patience": 1,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "fp16": false,
+    "attention": "sdpa",
+    "outer_folds": 3,
+    "inner_folds": 5,
+    "seed": 42,
+    "threads": 2,
+    "train_subset_folds": 1,
+    "budget_minutes": 75,
+    "holdout_split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494"
+  },
+  "labels": [
+    "c1",
+    "c234",
+    "c5"
+  ],
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-7.2.7-200.fc44.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+rocm6.4",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "source_sha256": {
+      "main.py": "0294a7e26b3837128007578fcba72530892fbc3a4749e080dd9b2fb0face3c87",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/audit.py": "30957ff33cdce8fe6782ab6220124eef9c8777d1fb947ea997b6c4663d3df23e",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/finetune.py": "0c8e4c04b3becc626c31a50e3827daef3cd708252905824dcd9e4c4fb439ee4a",
+      "clarity/finetune_data.py": "4c2aa331eb687c720eb6b237572ae9b53b282d68b05c22314172e35d9c4460d5",
+      "clarity/finetune_epochs.py": "340406462c8a92a27969af8a2dd6fea17025d4fd6f1c9fbc5911557f27f1d04a",
+      "clarity/finetune_final.py": "27fba315509bdbd797c8bddbc43532321a5f10eff8d42a8d57491ebd8fcdb778",
+      "clarity/finetune_grid.py": "2215c828f435105cd2ead7c0878a423c91e8aa0eac45245ac2f70f10d508f97e",
+      "clarity/finetune_grid_cv.py": "c2d64808f345d41372c066b01e683b9e5256ed6463cd8f1f8b58207d383cd3e9",
+      "clarity/finetune_predict.py": "6d70e32f1240e0fb2df927fef56cdb88f781aec1c067f4519ea3deb8e64279f2",
+      "clarity/hardware.py": "da39ffb0ab4bfd0da462361d75a278fb18543ae15269cf73e3d83df5996559b6",
+      "clarity/holdout.py": "c31a52cfd40d495849ed14ada66c988cb95eea76e167b4c4aba067d9a604947d",
+      "clarity/reporting.py": "082702e90775dc678add3b9243fa372dcee866bf95fdc52ce70cd2ad2fa10709"
+    }
+  },
+  "accelerator": {
+    "backend": "rocm",
+    "device_name": "AMD Radeon RX 6650 XT",
+    "architecture": "gfx1030",
+    "runtime_version": "6.4.43482-0f2d60242",
+    "torch_version": "2.8.0+rocm6.4",
+    "total_memory_mib": 8176.0
+  },
+  "requested_device": "gpu",
+  "caveat": "Final-model evaluation only. This frozen holdout has previously been consulted in lexical research; it is not historically untouched.",
+  "training_rows": 16093,
+  "training_groups": 12956,
+  "holdout_row_overlap": 0,
+  "holdout_group_overlap": 0,
+  "evaluated_rows": 3999,
+  "finished_at": "2026-09-30T14:22:41.394503+00:00",
+  "inference_seconds": 145.27722836400062,
+  "tokenization": {
+    "rows": 3999,
+    "truncated_rows": 448,
+    "truncated_fraction": 0.11202800700175043,
+    "median_raw_tokens": 175.0,
+    "p95_raw_tokens": 703.0999999999999,
+    "input_case_preserved": true,
+    "cache_fingerprint": "d33f4add7decf9670510980a5a5a1847b7d6eef982b7631c0f143bd9060e033f"
+  },
+  "accuracy": 0.3598399599899975,
+  "f1_macro": 0.35309215881791295,
+  "balanced_accuracy": 0.3591154375468438,
+  "classification_report": {
+    "c1": {
+      "precision": 0.3494736842105263,
+      "recall": 0.26412092283214,
+      "f1-score": 0.3008608971454463,
+      "support": 1257.0
+    },
+    "c234": {
+      "precision": 0.3703099510603589,
+      "recall": 0.3203952011291461,
+      "f1-score": 0.3435489973514945,
+      "support": 1417.0
+    },
+    "c5": {
+      "precision": 0.35820076796489303,
+      "recall": 0.4928301886792453,
+      "f1-score": 0.414866581956798,
+      "support": 1325.0
+    },
+    "accuracy": 0.3598399599899975,
+    "macro avg": {
+      "precision": 0.3593281344119261,
+      "recall": 0.3591154375468438,
+      "f1-score": 0.35309215881791295,
+      "support": 3999.0
+    },
+    "weighted avg": {
+      "precision": 0.3597483469013862,
+      "recall": 0.3598399599899975,
+      "f1-score": 0.35376076470408874,
+      "support": 3999.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      332,
+      391,
+      534
+    ],
+    [
+      327,
+      454,
+      636
+    ],
+    [
+      291,
+      381,
+      653
+    ]
+  ]
+}

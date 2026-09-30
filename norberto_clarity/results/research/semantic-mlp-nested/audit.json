@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "result_dir": "results/semantic-mlp-nested",
+  "evaluated_rows": 20092,
+  "evaluated_folds": 3,
+  "is_inner_selection_only": false,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "reference": "baseline",
+  "comparisons": {
+    "word_char_lr": {
+      "accuracy_delta": 0.012691618554648617,
+      "descriptive_95pct_interval": [
+        0.0069785362924908445,
+        0.01801259459945474
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "semantic_lr": {
+      "accuracy_delta": -0.01294047382042604,
+      "descriptive_95pct_interval": [
+        -0.021861758319537673,
+        -0.004597084397670435
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "semantic_mlp": {
+      "accuracy_delta": -0.0017917579135974518,
+      "descriptive_95pct_interval": [
+        -0.010374624104247747,
+        0.00604576917361631
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "selected": {
+      "accuracy_delta": 0.012691618554648617,
+      "descriptive_95pct_interval": [
+        0.0069785362924908445,
+        0.01801259459945474
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "note": "Checks saved data, splits and recomputed metrics, not all code paths or statistical independence of research rounds."
+}

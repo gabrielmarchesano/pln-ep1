@@ -1,0 +1,20 @@
+{
+  "description": "Fixed paired comparison of the historical lexical logistic reference and LinearSVC on the frozen validation split.",
+  "frozen_split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+  "candidates": [
+    {
+      "name": "word_char_logistic",
+      "model": "lexical",
+      "grid": {
+        "classifier__C": [0.25]
+      }
+    },
+    {
+      "name": "word_char_svc",
+      "model": "linear_svc",
+      "grid": {
+        "classifier__C": [0.05]
+      }
+    }
+  ]
+}

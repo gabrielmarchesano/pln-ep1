@@ -1,0 +1,15 @@
+{
+  "description": "LinearSVC com TF-IDF idêntico às referências; busca de regularização forte e ablação de caracteres.",
+  "candidates": [
+    {"name": "baseline", "model": "baseline", "grid": {}},
+    {"name": "word_char_lr", "model": "lexical", "grid": {
+      "classifier__C": [0.1, 0.25, 0.5]
+    }},
+    {"name": "word_svc", "model": "word_svc", "grid": {
+      "classifier__C": [0.01, 0.05, 0.1, 0.25, 0.5, 1.0]
+    }},
+    {"name": "word_char_svc", "model": "linear_svc", "grid": {
+      "classifier__C": [0.01, 0.05, 0.1, 0.25, 0.5, 1.0]
+    }}
+  ]
+}

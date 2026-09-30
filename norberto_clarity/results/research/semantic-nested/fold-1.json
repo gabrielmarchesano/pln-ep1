@@ -1,0 +1,252 @@
+{
+  "fold": 1,
+  "selected": "hybrid_lr",
+  "search": [
+    {
+      "name": "baseline",
+      "model": "baseline",
+      "best_params": {},
+      "best_inner_accuracy": 0.4382499514387334,
+      "seconds": 10.86666505500034,
+      "trials": [
+        {
+          "params": {},
+          "mean_accuracy": 0.4382499514387334,
+          "std_accuracy": 0.003712655590469866,
+          "fold_accuracy": [
+            0.4345265065700045,
+            0.4433175569078206,
+            0.4369057908383751
+          ]
+        }
+      ]
+    },
+    {
+      "name": "semantic_lr",
+      "model": "semantic",
+      "best_params": {
+        "classifier__C": 1.0
+      },
+      "best_inner_accuracy": 0.41892753224175605,
+      "seconds": 15.95089652399929,
+      "trials": [
+        {
+          "params": {
+            "classifier__C": 1.0
+          },
+          "mean_accuracy": 0.41892753224175605,
+          "std_accuracy": 0.007387536044696308,
+          "fold_accuracy": [
+            0.4188944268237426,
+            0.4279918864097363,
+            0.40989628349178914
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 10.0
+          },
+          "mean_accuracy": 0.41752723161368666,
+          "std_accuracy": 0.00838572865807162,
+          "fold_accuracy": [
+            0.4166289080199366,
+            0.42821726391706105,
+            0.40773552290406223
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 100.0
+          },
+          "mean_accuracy": 0.4141786171801025,
+          "std_accuracy": 0.003593744719105999,
+          "fold_accuracy": [
+            0.4132306298142275,
+            0.41897678611674555,
+            0.41032843560933446
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hybrid_lr",
+      "model": "hybrid",
+      "best_params": {
+        "classifier__C": 0.5,
+        "features__transformer_weights": {
+          "word": 1.0,
+          "char": 1.0,
+          "semantic": 1.0
+        }
+      },
+      "best_inner_accuracy": 0.44026095165923956,
+      "seconds": 493.46909970700017,
+      "trials": [
+        {
+          "params": {
+            "classifier__C": 0.5,
+            "features__transformer_weights": {
+              "word": 1.0,
+              "char": 1.0,
+              "semantic": 1.0
+            }
+          },
+          "mean_accuracy": 0.44026095165923956,
+          "std_accuracy": 0.003640765709817975,
+          "fold_accuracy": [
+            0.4370185772541912,
+            0.44534595447374353,
+            0.4384183232497839
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 0.5,
+            "features__transformer_weights": {
+              "word": 1.0,
+              "char": 1.0,
+              "semantic": 3.0
+            }
+          },
+          "mean_accuracy": 0.43586616208979345,
+          "std_accuracy": 0.004435904920180802,
+          "fold_accuracy": [
+            0.4358858178522882,
+            0.44128915934189766,
+            0.43042350907519444
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 2.0,
+            "features__transformer_weights": {
+              "word": 1.0,
+              "char": 1.0,
+              "semantic": 1.0
+            }
+          },
+          "mean_accuracy": 0.4357645978924596,
+          "std_accuracy": 0.0011719897443114675,
+          "fold_accuracy": [
+            0.4345265065700045,
+            0.4354293441514537,
+            0.4373379429559205
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 2.0,
+            "features__transformer_weights": {
+              "word": 1.0,
+              "char": 1.0,
+              "semantic": 3.0
+            }
+          },
+          "mean_accuracy": 0.43037803032273975,
+          "std_accuracy": 0.0011044322246142515,
+          "fold_accuracy": [
+            0.43180788400543724,
+            0.42911877394636017,
+            0.4302074330164218
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 8.0,
+            "features__transformer_weights": {
+              "word": 1.0,
+              "char": 1.0,
+              "semantic": 1.0
+            }
+          },
+          "mean_accuracy": 0.4270920774362647,
+          "std_accuracy": 0.004386388141441613,
+          "fold_accuracy": [
+            0.42478477571363843,
+            0.4232589587559162,
+            0.4332324978392394
+          ]
+        },
+        {
+          "params": {
+            "classifier__C": 8.0,
+            "features__transformer_weights": {
+              "word": 1.0,
+              "char": 1.0,
+              "semantic": 3.0
+            }
+          },
+          "mean_accuracy": 0.4245827404319365,
+          "std_accuracy": 0.004158556933384719,
+          "fold_accuracy": [
+            0.423878568192116,
+            0.4198782961460446,
+            0.4299913569576491
+          ]
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "fold": 1,
+      "train_rows": 13479,
+      "valid_rows": 6613,
+      "train_groups": 12095,
+      "valid_groups": 6048,
+      "group_overlap": 0,
+      "train_accuracy": 0.82788040655835,
+      "accuracy": 0.43535460456676245,
+      "f1_macro": 0.433526357723847,
+      "balanced_accuracy": 0.4337980133113586
+    },
+    "semantic_lr": {
+      "fold": 1,
+      "train_rows": 13479,
+      "valid_rows": 6613,
+      "train_groups": 12095,
+      "valid_groups": 6048,
+      "group_overlap": 0,
+      "train_accuracy": 0.4617553230951851,
+      "accuracy": 0.424920610917889,
+      "f1_macro": 0.42165381410823727,
+      "balanced_accuracy": 0.4233361083147491
+    },
+    "hybrid_lr": {
+      "fold": 1,
+      "train_rows": 13479,
+      "valid_rows": 6613,
+      "train_groups": 12095,
+      "valid_groups": 6048,
+      "group_overlap": 0,
+      "train_accuracy": 0.7384078937606647,
+      "accuracy": 0.4489641615000756,
+      "f1_macro": 0.44588934054707163,
+      "balanced_accuracy": 0.4483396886334316
+    },
+    "majority": {
+      "fold": 1,
+      "train_rows": 13479,
+      "valid_rows": 6613,
+      "train_groups": 12095,
+      "valid_groups": 6048,
+      "group_overlap": 0,
+      "train_accuracy": 0.3407522813265079,
+      "accuracy": 0.3417510963254196,
+      "f1_macro": 0.16980352379879035,
+      "balanced_accuracy": 0.3333333333333333
+    },
+    "selected": {
+      "fold": 1,
+      "train_rows": 13479,
+      "valid_rows": 6613,
+      "train_groups": 12095,
+      "valid_groups": 6048,
+      "group_overlap": 0,
+      "train_accuracy": 0.7384078937606647,
+      "accuracy": 0.4489641615000756,
+      "f1_macro": 0.44588934054707163,
+      "balanced_accuracy": 0.4483396886334316
+    }
+  }
+}

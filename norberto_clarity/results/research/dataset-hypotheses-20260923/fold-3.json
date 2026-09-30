@@ -1,0 +1,78 @@
+{
+  "fold": 3,
+  "train_rows": 10850,
+  "valid_rows": 5243,
+  "noise_detection": {
+    "suspect_rows": 39,
+    "confidence_threshold": 0.65,
+    "models": [
+      "linear_svc",
+      "logistic_regression",
+      "multinomial_nb"
+    ]
+  },
+  "policies": {
+    "raw": {
+      "accuracy": 0.4451649818806027,
+      "f1_macro": 0.4392889493274666,
+      "balanced_accuracy": 0.4429588013808592,
+      "train_rows_used": 10850,
+      "seconds": 17.961118159000762
+    },
+    "majority": {
+      "accuracy": 0.4392523364485981,
+      "f1_macro": 0.4334508142015398,
+      "balanced_accuracy": 0.43705213194357434,
+      "train_rows_used": 10604,
+      "seconds": 16.960897064000164,
+      "tie_rows_removed": 246,
+      "labels_reassigned": 412
+    },
+    "normalized": {
+      "accuracy": 0.44077818043105094,
+      "f1_macro": 0.4355452536347812,
+      "balanced_accuracy": 0.43866280176384326,
+      "train_rows_used": 10850,
+      "seconds": 16.641573569000684
+    },
+    "style": {
+      "accuracy": 0.4423040244135037,
+      "f1_macro": 0.43651802095559006,
+      "balanced_accuracy": 0.4401456311337093,
+      "train_rows_used": 10850,
+      "seconds": 22.52783365600044
+    },
+    "ordinal": {
+      "accuracy": 0.44096891092885754,
+      "f1_macro": 0.4293097930593464,
+      "balanced_accuracy": 0.4360540983555188,
+      "train_rows_used": 10850,
+      "seconds": 15.713864438999735
+    },
+    "consensus_filter": {
+      "accuracy": 0.4455464428762159,
+      "f1_macro": 0.4396208665391821,
+      "balanced_accuracy": 0.4434738907597002,
+      "train_rows_used": 10811,
+      "seconds": 15.371105582000382
+    },
+    "combined_svc": {
+      "accuracy": 0.4386801449551783,
+      "f1_macro": 0.43376947502378393,
+      "balanced_accuracy": 0.4371212575710673,
+      "train_rows_used": 10569,
+      "seconds": 20.178531712999757,
+      "tie_rows_removed": 242,
+      "labels_reassigned": 411
+    },
+    "combined_ordinal": {
+      "accuracy": 0.43066946404730116,
+      "f1_macro": 0.42125518830332975,
+      "balanced_accuracy": 0.4272837250726824,
+      "train_rows_used": 10569,
+      "seconds": 19.856190983999113,
+      "tie_rows_removed": 242,
+      "labels_reassigned": 411
+    }
+  }
+}

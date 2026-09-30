@@ -1,0 +1,181 @@
+{
+  "selected": "final_word_char_svc",
+  "searches": [
+    {
+      "name": "final_word_char_svc",
+      "model": "linear_svc",
+      "best_params": {
+        "classifier__C": 0.05
+      },
+      "best_inner_accuracy": 0.440961612794925,
+      "refit_seconds": 19.35385036468506,
+      "refit_diagnostics": {
+        "n_iter": 13
+      },
+      "convergence_warnings": [],
+      "seconds": 74.44481508999979,
+      "trials": [
+        {
+          "params": {
+            "classifier__C": 0.05
+          },
+          "mean_accuracy": 0.440961612794925,
+          "std_accuracy": 0.006173097645068923,
+          "mean_fit_seconds": 13.394321839014689,
+          "std_fit_seconds": 0.3161429528143701,
+          "mean_score_seconds": 4.959889491399129,
+          "std_score_seconds": 0.12093256796137039,
+          "fold_accuracy": [
+            0.44832769635475384,
+            0.44133644133644134,
+            0.43322070069357993
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "description": "Fixed lexical LinearSVC on unchanged source texts and labels; C selected in prior grouped nested CV.",
+    "candidates": [
+      {
+        "name": "final_word_char_svc",
+        "model": "linear_svc",
+        "grid": {
+          "classifier__C": [
+            0.05
+          ]
+        }
+      }
+    ]
+  },
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "dataset": {
+    "rows": 20092,
+    "class_counts": {
+      "c1": 6347,
+      "c234": 6853,
+      "c5": 6892
+    },
+    "majority_accuracy": 0.34302209834760106,
+    "empty_text_rows": 0,
+    "coerced_text_excel_rows": [
+      5028
+    ],
+    "unique_normalized_texts": 18143,
+    "duplicate_extra_rows": 1949,
+    "duplicate_groups": 500,
+    "conflicting_duplicate_groups": 316,
+    "rows_in_conflicting_duplicate_groups": 1975,
+    "median_words": 101.0,
+    "mean_words": 144.27428827393987,
+    "p95_words": 419.0,
+    "max_words": 1821
+  },
+  "folds": 3,
+  "seed": 42,
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-7.2.5-200.fc44.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+rocm6.4",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "source_sha256": {
+      "main.py": "fd61857ac5edeffc856e0d2fca067ad5deba580d057aeff5dae7f018b4a9f016",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/audit.py": "c1f97a103bc603f7d3a07521d1e081a9550e9b0058c96aa9b8b57e430ca80a8c",
+      "clarity/cli.py": "cddf4453e6b4802f8fa874d1a4205bb092866e4a17fa004038f1d9d30a00eb6c",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/experiment.py": "0403c6cb16dbd09435a3e712a39479f5c04900950dace7f047bcbed6d5cf6b32",
+      "clarity/finetune.py": "ad218ea8cdb6237a624703622dcfafebb6688b6ea8a76665a7fea74dafcde981",
+      "clarity/hardware.py": "2a4d4f850a571907dcb1a335a68b10933f7d8365a7e6e031c14b2b8c4cad24b5",
+      "clarity/holdout.py": "40740e3227cda0e64366711a45a19fcbe1197d69f3e9fc968e4a95ca42e0a7d8",
+      "clarity/holdout_train.py": "686532f2d8360f6b5f086cf00eaf5d9543bb4ef44ec3302e312fc3a4c13cbba2",
+      "clarity/models.py": "5f92aed44d4986ed3f1d8a0d4abb62e384a2f8ed3613b6a1f6f0824a0921b356",
+      "clarity/semantic.py": "4d10ab30b438e0bc22ae5647dbd9f6c4cd86eabbdaa1c6498c3bee7b1f9618e7",
+      "clarity/static_embeddings.py": "496974bf47d3c36425e65f456b9c0d2f128227051864759589ac0b1be064846c"
+    }
+  },
+  "fixed_validation": {
+    "protocol": "frozen_grouped_holdout_reused_for_validation",
+    "split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+    "split_path": "results/dataset-hypotheses-20260923/splits.csv",
+    "development_rows": 16093,
+    "holdout_rows": 3999,
+    "development_groups": 12956,
+    "holdout_groups": 3281,
+    "labels": [
+      "c1",
+      "c234",
+      "c5"
+    ],
+    "accuracy": 0.44811202800700173,
+    "f1_macro": 0.4447431774978208,
+    "balanced_accuracy": 0.4504299616020319,
+    "confusion_matrix": [
+      [
+        550,
+        331,
+        376
+      ],
+      [
+        385,
+        482,
+        550
+      ],
+      [
+        245,
+        320,
+        760
+      ]
+    ],
+    "classification_report": {
+      "c1": {
+        "precision": 0.4661016949152542,
+        "recall": 0.4375497215592681,
+        "f1-score": 0.45137464095199015,
+        "support": 1257.0
+      },
+      "c234": {
+        "precision": 0.42541924095322153,
+        "recall": 0.34015525758645027,
+        "f1-score": 0.3780392156862745,
+        "support": 1417.0
+      },
+      "c5": {
+        "precision": 0.45077105575326215,
+        "recall": 0.5735849056603773,
+        "f1-score": 0.5048156758551976,
+        "support": 1325.0
+      },
+      "accuracy": 0.44811202800700173,
+      "macro avg": {
+        "precision": 0.44743066387391267,
+        "recall": 0.4504299616020319,
+        "f1-score": 0.4447431774978208,
+        "support": 3999.0
+      },
+      "weighted avg": {
+        "precision": 0.44660678764997797,
+        "recall": 0.44811202800700173,
+        "f1-score": 0.44309583966297555,
+        "support": 3999.0
+      }
+    },
+    "caveat": "Este holdout será consultado repetidamente para decisões de modelagem; é validação fixa, não teste final independente. A base inteira já foi analisada antes."
+  },
+  "note": "A busca e o ajuste usam apenas desenvolvimento; o holdout só entra na avaliação."
+}

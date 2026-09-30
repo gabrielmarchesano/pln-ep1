@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "mode": "predict-test",
+  "predicted_rows": 900,
+  "training_performed": false,
+  "evaluation_performed": false,
+  "input_sha256": "e626f030d4bf2be889fc41dd1fe9b81fb31f1f50f3ace50530d658683260449f",
+  "output_sha256": "3dd2b68a0082f635cafa28cbeea7ab799971867ee63f40d492f26ff283898fc6",
+  "predictions_sha256": "6d82ec85b7ad16a91331f89494667c5752c2e9e78fe6b4857430b89bed579963",
+  "checks": {
+    "source_workbook_unchanged": true,
+    "sheet_names_and_dimensions_preserved": true,
+    "all_non_label_cells_and_styles_preserved": true,
+    "all_original_label_cells_blank": true,
+    "all_900_output_label_cells_filled": true,
+    "prediction_csv_rows_match_excel_order": true,
+    "labels_valid": true,
+    "probabilities_finite_and_normalized": true,
+    "predictions_equal_probability_argmax": true,
+    "adapter_hash_matches_final_model": true,
+    "report_hashes_match_files": true
+  },
+  "prediction_counts": {"c1": 240, "c234": 355, "c5": 305},
+  "note": "No ground-truth labels are available in test1.xlsx; prediction counts are not accuracy or F1."
+}

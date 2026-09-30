@@ -1,0 +1,12 @@
+{
+  "description": "Final lexical logistic regression fitted on the complete unchanged training set after fixed-validation model choice.",
+  "candidates": [
+    {
+      "name": "final_word_char_logistic",
+      "model": "lexical",
+      "grid": {
+        "classifier__C": [0.25]
+      }
+    }
+  ]
+}
