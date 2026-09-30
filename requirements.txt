@@ -2,6 +2,7 @@ pandas
 numpy
 scikit-learn
 openpyxl
+ipykernel
 scipy
 gensim
 torch
