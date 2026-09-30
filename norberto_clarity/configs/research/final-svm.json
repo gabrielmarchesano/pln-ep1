@@ -1,0 +1,13 @@
+{
+  "description": "Fixed lexical LinearSVC on unchanged source texts and labels; C selected in prior grouped nested CV.",
+  "frozen_split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+  "candidates": [
+    {
+      "name": "final_word_char_svc",
+      "model": "linear_svc",
+      "grid": {
+        "classifier__C": [0.05]
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+  "development_rows": 16093,
+  "holdout_rows": 3999,
+  "group_overlap": 0,
+  "selected_by_development_cv": "word_char_svc",
+  "models_checked": [
+    "word_char_logistic",
+    "word_char_svc"
+  ],
+  "metrics": {
+    "word_char_logistic": {
+      "accuracy": 0.4508627156789197,
+      "f1_macro": 0.4478157039657455,
+      "balanced_accuracy": 0.4529413687190122
+    },
+    "word_char_svc": {
+      "accuracy": 0.44811202800700173,
+      "f1_macro": 0.4447431774978208,
+      "balanced_accuracy": 0.4504299616020319
+    }
+  },
+  "comparisons_with_reference": {
+    "word_char_svc": {
+      "accuracy_delta": -0.0027506876719179795,
+      "descriptive_95pct_interval": [
+        -0.007795008228392582,
+        0.0020164100436538416
+      ],
+      "resampling_unit": "frozen_similarity_component",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "serialized_predictions_reproduced": true,
+  "limitations": [
+    "This audits saved inputs, metrics and the selected artifact, not every training operation.",
+    "The reused holdout is fixed validation, not an independent final test.",
+    "Bootstrap intervals are descriptive and do not correct adaptive research selection."
+  ]
+}

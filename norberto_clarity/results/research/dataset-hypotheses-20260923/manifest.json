@@ -1,0 +1,119 @@
+{
+  "started_at": "2026-09-23T20:06:14.377357+00:00",
+  "status": "holdout_frozen",
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "protocol": "prospective_holdout_grouped_development_cv",
+  "holdout_used_for_modeling": false,
+  "holdout_evaluated": false,
+  "historical_caveat": "All source rows were present in earlier exploratory analyses; this holdout is prospective, not historically untouched.",
+  "rows": 20092,
+  "development_rows": 16093,
+  "holdout_rows": 3999,
+  "seed": 42,
+  "folds": 3,
+  "holdout_folds": 5,
+  "grouping": {
+    "threshold": 0.93,
+    "canonical_groups": 17873,
+    "similarity_pairs": 70690,
+    "final_groups": 16237,
+    "method": "canonical identifier masking plus exhaustive char 3-5 TF-IDF cosine",
+    "development_conflicting_groups": 440,
+    "development_conflicting_rows": 3170,
+    "development_near_text_conflicting_groups": 364
+  },
+  "policies": {
+    "raw": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "majority": [
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "normalized": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "style": [
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "ordinal": [
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    "consensus_filter": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    "combined_svc": [
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    "combined_ordinal": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-7.2.5-200.fc44.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+rocm6.4",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "source_sha256": {
+      "main.py": "fd61857ac5edeffc856e0d2fca067ad5deba580d057aeff5dae7f018b4a9f016",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/audit.py": "c1f97a103bc603f7d3a07521d1e081a9550e9b0058c96aa9b8b57e430ca80a8c",
+      "clarity/cleaning.py": "bd3d441d295fedde46b3a311d9b8cdaf1e8fee6652732d90269036294c226783",
+      "clarity/cli.py": "cddf4453e6b4802f8fa874d1a4205bb092866e4a17fa004038f1d9d30a00eb6c",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/dataset_hypotheses.py": "327b41d1d8df273c2a83ceaa1a00170e16a0392a3342d8ba2e07a6442f059d5b",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/experiment.py": "0403c6cb16dbd09435a3e712a39479f5c04900950dace7f047bcbed6d5cf6b32",
+      "clarity/finetune.py": "ad218ea8cdb6237a624703622dcfafebb6688b6ea8a76665a7fea74dafcde981",
+      "clarity/hardware.py": "2a4d4f850a571907dcb1a335a68b10933f7d8365a7e6e031c14b2b8c4cad24b5",
+      "clarity/models.py": "5f92aed44d4986ed3f1d8a0d4abb62e384a2f8ed3613b6a1f6f0824a0921b356",
+      "clarity/semantic.py": "4d10ab30b438e0bc22ae5647dbd9f6c4cd86eabbdaa1c6498c3bee7b1f9618e7",
+      "clarity/static_embeddings.py": "496974bf47d3c36425e65f456b9c0d2f128227051864759589ac0b1be064846c"
+    }
+  }
+}

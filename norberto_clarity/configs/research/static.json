@@ -1,0 +1,13 @@
+{
+  "description": "Semântica eficiente em CPU: POTION multilíngue congelado e fusão com palavras TF-IDF.",
+  "candidates": [
+    {"name": "baseline", "model": "baseline", "grid": {}},
+    {"name": "static_lr", "model": "static", "grid": {
+      "classifier__C": [1.0, 10.0, 100.0]
+    }},
+    {"name": "static_hybrid_lr", "model": "static_hybrid", "grid": {
+      "classifier__C": [0.5, 2.0, 8.0]
+    }}
+  ]
+}
+

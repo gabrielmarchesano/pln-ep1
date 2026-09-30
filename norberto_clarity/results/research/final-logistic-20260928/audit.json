@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "artifact_sha256": "f7af61142f43e1c8a37f0cd5a8191dd6d83ba1222cd8ecf12281f9929ac827c9",
+  "metadata_sha256": "7519d53a776cee1d0aeb24771932585bdf8d1974b1cdfad2e3f7d20914c44ff2",
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "selected": "final_word_char_logistic",
+  "rows_fitted": 20092,
+  "labels": [
+    "c1",
+    "c234",
+    "c5"
+  ],
+  "classifier": "LogisticRegression",
+  "classifier_c": 0.25,
+  "classifier_iterations": [
+    49
+  ],
+  "vocabulary_sizes": {
+    "word": 60000,
+    "char": 50000
+  },
+  "training_prediction_sha256": "fb12d09a33c0e8441d3ba526407b43c036c0966864d33ceb5b26f39a34e1d365",
+  "training_prediction_counts": {
+    "c1": 6312,
+    "c234": 6136,
+    "c5": 7644
+  },
+  "training_accuracy_sanity_check": 0.648765677881744,
+  "probabilities_checked": true,
+  "limitations": [
+    "Training accuracy is only a serialization sanity check, not a generalization estimate.",
+    "The complete training set was used for fitting; no internal untouched test remains.",
+    "Generalization must be assessed on the official external test when available."
+  ]
+}

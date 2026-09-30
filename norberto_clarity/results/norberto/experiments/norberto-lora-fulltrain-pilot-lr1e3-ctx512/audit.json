@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "result_dir": "results/norberto-lora-fulltrain-pilot-lr1e3-ctx512",
+  "evaluated_rows": 2617,
+  "evaluated_folds": 1,
+  "is_inner_selection_only": true,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "reference": "lexical_matched",
+  "probability_models_checked": [
+    "norberto_lora",
+    "baseline_matched",
+    "lexical_matched"
+  ],
+  "comparisons": {
+    "norberto_lora": {
+      "accuracy_delta": 0.012991975544516622,
+      "descriptive_95pct_interval": [
+        -0.00687720163823105,
+        0.03360588175796173
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "baseline_matched": {
+      "accuracy_delta": 0.0,
+      "descriptive_95pct_interval": [
+        -0.01515918449815271,
+        0.015164331578037883
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "note": "Checks saved data, splits and recomputed metrics, not all code paths or statistical independence of research rounds."
+}

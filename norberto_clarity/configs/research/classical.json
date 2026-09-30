@@ -1,0 +1,10 @@
+{
+  "description": "Grade pré-definida para comparação lexical com baseline fixo.",
+  "candidates": [
+    {"name": "baseline", "model": "baseline", "grid": {}},
+    {"name": "word_char_lr", "model": "lexical", "grid": {
+      "classifier__C": [0.5, 2.0, 8.0]
+    }}
+  ]
+}
+

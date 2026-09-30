@@ -1,0 +1,25 @@
+{
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "dataset": {
+    "rows": 20092,
+    "class_counts": {
+      "c1": 6347,
+      "c234": 6853,
+      "c5": 6892
+    },
+    "majority_accuracy": 0.34302209834760106,
+    "empty_text_rows": 0,
+    "coerced_text_excel_rows": [
+      5028
+    ],
+    "unique_normalized_texts": 18143,
+    "duplicate_extra_rows": 1949,
+    "duplicate_groups": 500,
+    "conflicting_duplicate_groups": 316,
+    "rows_in_conflicting_duplicate_groups": 1975,
+    "median_words": 101.0,
+    "mean_words": 144.27428827393987,
+    "p95_words": 419.0,
+    "max_words": 1821
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "check": "Saved best-adapter weights have the same SHA-256 as each selected checkpoint adapter.",
+  "artifact_dir": "artifacts/norberto-lora-development-ctx512-20260928",
+  "folds": [
+    {
+      "fold": 1,
+      "best_checkpoint": "checkpoint-1072",
+      "best_epoch": 2,
+      "adapter_sha256": "d7b03edb083b408bd3375674e70f513c5764b17e4fbd1b0809766474a9ea3f7d",
+      "matches_selected_checkpoint": true
+    },
+    {
+      "fold": 2,
+      "best_checkpoint": "checkpoint-1647",
+      "best_epoch": 3,
+      "adapter_sha256": "583e31eb00f3dbf798b4509e740fe5fba784b6881515ffb2ce268d739977890f",
+      "matches_selected_checkpoint": true
+    },
+    {
+      "fold": 3,
+      "best_checkpoint": "checkpoint-1020",
+      "best_epoch": 2,
+      "adapter_sha256": "5e0a5e2d96e82b808e020f91eee20cba9bb10758ceb0faca30c39efad23dd419",
+      "matches_selected_checkpoint": true
+    }
+  ]
+}

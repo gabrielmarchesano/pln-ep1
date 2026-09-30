@@ -1,0 +1,345 @@
+{
+  "started_at": "2026-09-17T18:18:00.483670+00:00",
+  "config": {
+    "description": "Piloto supervisionado BERTimbau: somente holdout interno do primeiro treino externo; sem avaliação externa.",
+    "model_name": "neuralmind/bert-base-portuguese-cased",
+    "revision": "94d69c95f98f7d5b2a8700c420230ae10def0baa",
+    "max_length": 128,
+    "truncation": "head_tail",
+    "lora_rank": 4,
+    "lora_alpha": 8,
+    "lora_dropout": 0.05,
+    "lora_layers": null,
+    "batch_size": 4,
+    "gradient_accumulation": 4,
+    "eval_batch_size": 8,
+    "learning_rate": 0.0002,
+    "epochs": 3,
+    "patience": 1,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "fp16": false,
+    "attention": "sdpa",
+    "outer_folds": 3,
+    "inner_folds": 5,
+    "seed": 42,
+    "threads": 2,
+    "train_subset_folds": 3,
+    "budget_minutes": 40
+  },
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-7.2.5-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+cu126",
+      "model2vec": "0.7.0",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "source_sha256": {
+      "main.py": "fd61857ac5edeffc856e0d2fca067ad5deba580d057aeff5dae7f018b4a9f016",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/cli.py": "cddf4453e6b4802f8fa874d1a4205bb092866e4a17fa004038f1d9d30a00eb6c",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/experiment.py": "0e7bb140025972f8c33fef8801581a26599e2fcf48e10e5eb158ddd2068ecfdc",
+      "clarity/finetune.py": "9b2cf2ce059f0dc4722c3c48d71f75ca6356082a7ed7a722c2d9a9b369933ec3",
+      "clarity/models.py": "5f92aed44d4986ed3f1d8a0d4abb62e384a2f8ed3613b6a1f6f0824a0921b356",
+      "clarity/semantic.py": "3ea7fa10553eb557f5edcace35428f3ab41944e833ea752c40373f7e2682f941",
+      "clarity/static_embeddings.py": "496974bf47d3c36425e65f456b9c0d2f128227051864759589ac0b1be064846c"
+    }
+  },
+  "gpu": "NVIDIA GeForce MX550",
+  "torch_cuda": "12.6",
+  "mode": "pilot",
+  "protocol": "grouped_inner_holdout_pilot",
+  "note": "One inner grouped holdout, not inner k-fold grid search; no full outer-train refit.",
+  "rows": 20092,
+  "requested_folds": [
+    1
+  ],
+  "finished_at": "2026-09-17T18:39:40.259688+00:00",
+  "seconds": 1296.917373581,
+  "evaluated_rows": 2617,
+  "status": "complete",
+  "tokenization": {
+    "rows": 20092,
+    "truncated_rows": 12682,
+    "truncated_fraction": 0.6311964961178579,
+    "median_raw_tokens": 180.0,
+    "p95_raw_tokens": 716.0,
+    "input_case_preserved": true,
+    "cache_fingerprint": "21326eb7ce86cebd11d405e436c1bc737ffa9fbdfdaba3e04598303e58e77809"
+  },
+  "models": {
+    "bertimbau_lora": {
+      "pooled": {
+        "accuracy": 0.38326327856324033,
+        "f1_macro": 0.3733031706049829,
+        "balanced_accuracy": 0.38288148463819666
+      },
+      "fold_results": [
+        {
+          "fold": 1,
+          "accuracy": 0.38326327856324033,
+          "f1_macro": 0.3733031706049829,
+          "balanced_accuracy": 0.38288148463819666
+        }
+      ],
+      "labels": [
+        "c1",
+        "c234",
+        "c5"
+      ],
+      "confusion_matrix": [
+        [
+          220,
+          288,
+          354
+        ],
+        [
+          187,
+          298,
+          397
+        ],
+        [
+          124,
+          264,
+          485
+        ]
+      ],
+      "classification_report": {
+        "c1": {
+          "precision": 0.4143126177024482,
+          "recall": 0.2552204176334107,
+          "f1-score": 0.31586503948312994,
+          "support": 862.0
+        },
+        "c234": {
+          "precision": 0.35058823529411764,
+          "recall": 0.3378684807256236,
+          "f1-score": 0.3441108545034642,
+          "support": 882.0
+        },
+        "c5": {
+          "precision": 0.39239482200647247,
+          "recall": 0.5555555555555556,
+          "f1-score": 0.4599336178283547,
+          "support": 873.0
+        },
+        "accuracy": 0.38326327856324033,
+        "macro avg": {
+          "precision": 0.3857652250010128,
+          "recall": 0.38288148463819666,
+          "f1-score": 0.3733031706049829,
+          "support": 2617.0
+        },
+        "weighted avg": {
+          "precision": 0.3855242566299475,
+          "recall": 0.38326327856324033,
+          "f1-score": 0.37344420560591024,
+          "support": 2617.0
+        }
+      },
+      "mean_accuracy": 0.38326327856324033,
+      "std_accuracy": 0.0,
+      "mean_f1_macro": 0.3733031706049829,
+      "std_f1_macro": 0.0,
+      "mean_balanced_accuracy": 0.38288148463819666,
+      "std_balanced_accuracy": 0.0
+    },
+    "baseline_matched": {
+      "pooled": {
+        "accuracy": 0.4042797095911349,
+        "f1_macro": 0.3999473059220919,
+        "balanced_accuracy": 0.40403393479604227
+      },
+      "fold_results": [
+        {
+          "fold": 1,
+          "accuracy": 0.4042797095911349,
+          "f1_macro": 0.3999473059220919,
+          "balanced_accuracy": 0.40403393479604227
+        }
+      ],
+      "labels": [
+        "c1",
+        "c234",
+        "c5"
+      ],
+      "confusion_matrix": [
+        [
+          272,
+          311,
+          279
+        ],
+        [
+          212,
+          324,
+          346
+        ],
+        [
+          142,
+          269,
+          462
+        ]
+      ],
+      "classification_report": {
+        "c1": {
+          "precision": 0.43450479233226835,
+          "recall": 0.31554524361948955,
+          "f1-score": 0.3655913978494624,
+          "support": 862.0
+        },
+        "c234": {
+          "precision": 0.3584070796460177,
+          "recall": 0.3673469387755102,
+          "f1-score": 0.3628219484882419,
+          "support": 882.0
+        },
+        "c5": {
+          "precision": 0.4250229990800368,
+          "recall": 0.5292096219931272,
+          "f1-score": 0.4714285714285714,
+          "support": 873.0
+        },
+        "accuracy": 0.4042797095911349,
+        "macro avg": {
+          "precision": 0.4059782903527743,
+          "recall": 0.40403393479604227,
+          "f1-score": 0.3999473059220919,
+          "support": 2617.0
+        },
+        "weighted avg": {
+          "precision": 0.40569478541653614,
+          "recall": 0.4042797095911349,
+          "f1-score": 0.39996403758884547,
+          "support": 2617.0
+        }
+      },
+      "mean_accuracy": 0.4042797095911349,
+      "std_accuracy": 0.0,
+      "mean_f1_macro": 0.3999473059220919,
+      "std_f1_macro": 0.0,
+      "mean_balanced_accuracy": 0.40403393479604227,
+      "std_balanced_accuracy": 0.0
+    },
+    "lexical_matched": {
+      "pooled": {
+        "accuracy": 0.4149789835689721,
+        "f1_macro": 0.4054495421371395,
+        "balanced_accuracy": 0.414721105936521
+      },
+      "fold_results": [
+        {
+          "fold": 1,
+          "accuracy": 0.4149789835689721,
+          "f1_macro": 0.4054495421371395,
+          "balanced_accuracy": 0.414721105936521
+        }
+      ],
+      "labels": [
+        "c1",
+        "c234",
+        "c5"
+      ],
+      "confusion_matrix": [
+        [
+          256,
+          289,
+          317
+        ],
+        [
+          180,
+          305,
+          397
+        ],
+        [
+          117,
+          231,
+          525
+        ]
+      ],
+      "classification_report": {
+        "c1": {
+          "precision": 0.4629294755877034,
+          "recall": 0.29698375870069604,
+          "f1-score": 0.3618374558303887,
+          "support": 862.0
+        },
+        "c234": {
+          "precision": 0.3696969696969697,
+          "recall": 0.3458049886621315,
+          "f1-score": 0.35735207967193905,
+          "support": 882.0
+        },
+        "c5": {
+          "precision": 0.423728813559322,
+          "recall": 0.6013745704467354,
+          "f1-score": 0.4971590909090909,
+          "support": 873.0
+        },
+        "accuracy": 0.4149789835689721,
+        "macro avg": {
+          "precision": 0.41878508628133176,
+          "recall": 0.414721105936521,
+          "f1-score": 0.4054495421371395,
+          "support": 2617.0
+        },
+        "weighted avg": {
+          "precision": 0.4184307181760091,
+          "recall": 0.4149789835689721,
+          "f1-score": 0.4054674465265883,
+          "support": 2617.0
+        }
+      },
+      "mean_accuracy": 0.4149789835689721,
+      "std_accuracy": 0.0,
+      "mean_f1_macro": 0.4054495421371395,
+      "std_f1_macro": 0.0,
+      "mean_balanced_accuracy": 0.414721105936521,
+      "std_balanced_accuracy": 0.0
+    }
+  },
+  "comparisons_with_lexical": {
+    "bertimbau_lora": {
+      "accuracy_delta": -0.03171570500573175,
+      "descriptive_95pct_interval": [
+        -0.055236682311603426,
+        -0.00841486083327009
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "baseline_matched": {
+      "accuracy_delta": -0.010699273977837218,
+      "descriptive_95pct_interval": [
+        -0.024676927635623316,
+        0.003053522622197201
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "limitations": [
+    "Pilot scores select checkpoints and are not outer-test estimates.",
+    "Epochs selected by one inner holdout, not full inner CV.",
+    "No full outer-train refit; matched and full lexical controls distinguish training size.",
+    "Research configurations may change between runs; repeated comparisons are exploratory.",
+    "Budget stops, when present, are recorded per fold; training may end before requested epochs."
+  ]
+}

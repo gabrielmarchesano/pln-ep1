@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "result_dir": "results/bertimbau-lora-pilot",
+  "evaluated_rows": 2617,
+  "evaluated_folds": 1,
+  "is_inner_selection_only": true,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "reference": "lexical_matched",
+  "probability_models_checked": [],
+  "comparisons": {
+    "bertimbau_lora": {
+      "accuracy_delta": -0.03171570500573175,
+      "descriptive_95pct_interval": [
+        -0.055236682311603426,
+        -0.00841486083327009
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "baseline_matched": {
+      "accuracy_delta": -0.010699273977837218,
+      "descriptive_95pct_interval": [
+        -0.024676927635623316,
+        0.003053522622197201
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo de OOF; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "note": "Checks saved data, splits and recomputed metrics, not all code paths or statistical independence of research rounds."
+}

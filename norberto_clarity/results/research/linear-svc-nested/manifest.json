@@ -1,0 +1,87 @@
+{
+  "started_at": "2026-09-16T23:12:31.161201+00:00",
+  "protocol": "nested_stratified_group_kfold",
+  "seed": 42,
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "rows": 20092,
+  "config": {
+    "description": "LinearSVC com TF-IDF idêntico às referências; busca de regularização forte e ablação de caracteres.",
+    "candidates": [
+      {
+        "name": "baseline",
+        "model": "baseline",
+        "grid": {}
+      },
+      {
+        "name": "word_char_lr",
+        "model": "lexical",
+        "grid": {
+          "classifier__C": [
+            0.1,
+            0.25,
+            0.5
+          ]
+        }
+      },
+      {
+        "name": "word_svc",
+        "model": "word_svc",
+        "grid": {
+          "classifier__C": [
+            0.01,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1.0
+          ]
+        }
+      },
+      {
+        "name": "word_char_svc",
+        "model": "linear_svc",
+        "grid": {
+          "classifier__C": [
+            0.01,
+            0.05,
+            0.1,
+            0.25,
+            0.5,
+            1.0
+          ]
+        }
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-7.2.5-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.3.3",
+      "pandas": "2.3.2",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "sentence-transformers": "5.1.1",
+      "transformers": "4.57.1",
+      "torch": "2.8.0+cu126",
+      "model2vec": "0.7.0"
+    },
+    "source_sha256": {
+      "main.py": "fd61857ac5edeffc856e0d2fca067ad5deba580d057aeff5dae7f018b4a9f016",
+      "clarity/__init__.py": "4d162e36510e3426904b2eccf061d241c6cb7ed661a869bc6e48098d046fa097",
+      "clarity/cli.py": "cddf4453e6b4802f8fa874d1a4205bb092866e4a17fa004038f1d9d30a00eb6c",
+      "clarity/data.py": "4ed8d5a44347035fb9a06c88e35fff2cd7666abe9f17ec90d1a21b686fd177bb",
+      "clarity/delivery.py": "441c1e0ec87223cd8e6811413b7b0ed98bde0f77df12fb7f656934f76dd72798",
+      "clarity/experiment.py": "ce764dc3591e64b6449d5029240f601683a4364ba0524608b405fb354f226b4d",
+      "clarity/models.py": "8efb05d0a31ab9177ba49fbf7e730030b073f42cd38f3933a877727fe5685179",
+      "clarity/semantic.py": "3ea7fa10553eb557f5edcace35428f3ab41944e833ea752c40373f7e2682f941",
+      "clarity/static_embeddings.py": "496974bf47d3c36425e65f456b9c0d2f128227051864759589ac0b1be064846c"
+    },
+    "source_capture": "experiment_start"
+  }
+}

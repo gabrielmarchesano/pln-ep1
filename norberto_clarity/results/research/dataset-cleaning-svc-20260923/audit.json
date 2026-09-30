@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "audited_at": "2026-09-23T19:35:54Z",
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "rows": 20092,
+  "checks": {
+    "run_completed": true,
+    "dataset_hash_matches_manifest_and_results": true,
+    "source_hash_matches_manifest": true,
+    "all_excel_rows_present_once": true,
+    "labels_match_source_workbook": true,
+    "masked_group_ids_match_source_text": true,
+    "masked_groups_are_disjoint_across_outer_folds": true,
+    "outer_fold_assignments_reproduced": true,
+    "inner_policy_selections_reproduced": true,
+    "conflict_filter_uses_outer_training_rows_only": true,
+    "selected_predictions_match_selected_policy_per_fold": true,
+    "pooled_accuracy_f1_and_confusion_matrices_recomputed": true
+  },
+  "correct_predictions": {
+    "raw": 9094,
+    "masked": 9031,
+    "conflicts_excluded": 9061,
+    "masked_conflicts_excluded": 9000,
+    "selected": 9073
+  },
+  "primary_comparison": {
+    "candidate": "selected",
+    "reference": "raw",
+    "accuracy_delta": -0.0010451921162651801,
+    "net_correct_predictions": -21,
+    "descriptive_95pct_interval": [-0.0026001074272549705, 0.0005489700070889337]
+  },
+  "caveat": "The interval conditions on these OOF predictions and does not correct for prior adaptive model selection."
+}

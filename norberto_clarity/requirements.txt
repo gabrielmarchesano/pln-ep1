@@ -1,0 +1,6 @@
+-r requirements/common.txt
+transformers==4.57.1
+torch==2.8.0
+peft==0.17.1
+accelerate==1.10.1
+psutil==7.2.2

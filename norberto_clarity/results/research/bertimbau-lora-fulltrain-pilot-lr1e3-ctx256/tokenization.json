@@ -1,0 +1,9 @@
+{
+  "rows": 20092,
+  "truncated_rows": 7198,
+  "truncated_fraction": 0.3582520406131794,
+  "median_raw_tokens": 180.0,
+  "p95_raw_tokens": 716.0,
+  "input_case_preserved": true,
+  "cache_fingerprint": "e32de7e006bc8fed99a3963e687cdb0c4774e0433554c07740ea9e013d136e88"
+}

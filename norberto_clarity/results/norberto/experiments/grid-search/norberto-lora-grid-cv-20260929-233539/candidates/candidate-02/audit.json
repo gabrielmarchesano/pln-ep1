@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "result_dir": "results/norberto-lora-grid-cv-20260929-233539/candidates/candidate-02",
+  "evaluated_rows": 16093,
+  "evaluated_folds": 3,
+  "is_inner_selection_only": false,
+  "dataset_sha256": "0e9219233664ac675fc47982bbc822acd3bb15d67fb7bfc26b67bec047e46818",
+  "reference": "lexical_full",
+  "probability_models_checked": [
+    "norberto_lora",
+    "baseline_matched",
+    "lexical_matched",
+    "lexical_full"
+  ],
+  "reserved_holdout_rows": 3999,
+  "split_sha256": "0f78e7a809c7b7584db05b33cf03a73ff586d5de02ba824c16562d5070d41494",
+  "comparisons": {
+    "norberto_lora": {
+      "accuracy_delta": -0.008202323991797676,
+      "descriptive_95pct_interval": [
+        -0.01700342091278947,
+        0.0009567373335009327
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "baseline_matched": {
+      "accuracy_delta": -0.008575156900515753,
+      "descriptive_95pct_interval": [
+        -0.015374786446982881,
+        -0.0018343968052046335
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    },
+    "lexical_matched": {
+      "accuracy_delta": -0.00012427763623935873,
+      "descriptive_95pct_interval": [
+        -0.005285028787470634,
+        0.005163938442395483
+      ],
+      "resampling_unit": "normalized_text_group",
+      "repeats": 2000,
+      "caveat": "Intervalo descritivo condicionado às predições avaliadas; não mede toda a incerteza do treino nem constitui garantia de melhora no teste oficial."
+    }
+  },
+  "note": "Checks saved data, splits and recomputed metrics, not all code paths or statistical independence of research rounds."
+}

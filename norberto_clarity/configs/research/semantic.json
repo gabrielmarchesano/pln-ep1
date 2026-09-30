@@ -1,0 +1,17 @@
+{
+  "description": "Ablação de representação semântica congelada e fusão lexical-semântica.",
+  "candidates": [
+    {"name": "baseline", "model": "baseline", "grid": {}},
+    {"name": "semantic_lr", "model": "semantic", "grid": {
+      "classifier__C": [1.0, 10.0, 100.0]
+    }},
+    {"name": "hybrid_lr", "model": "hybrid", "grid": {
+      "classifier__C": [0.5, 2.0, 8.0],
+      "features__transformer_weights": [
+        {"word": 1.0, "char": 1.0, "semantic": 1.0},
+        {"word": 1.0, "char": 1.0, "semantic": 3.0}
+      ]
+    }}
+  ]
+}
+
